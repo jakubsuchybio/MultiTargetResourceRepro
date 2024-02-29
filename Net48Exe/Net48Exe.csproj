@@ -7,6 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <!--
+        Because we have multiple NetStLib projects in our solution that have resources and as we have like 50-80 avg references, it could get messy quite quickly
+        if we would have to modify all occurences of <ProjectReference ... /> to something like <ProjectReference ..><ChildOutputDir>..</ChildOutputDir></ProjectReference>
+        -->
       <ProjectReference Include="..\NetStLib\NetStLib.csproj" />
     </ItemGroup>
     

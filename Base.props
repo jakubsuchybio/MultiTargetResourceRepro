@@ -2,8 +2,10 @@
     <PropertyGroup>
         <PlatformTarget>x86</PlatformTarget>
 
+        <!-- In our real solution we have 230+ projects, where I would say avg no. of project references is around 50-80 (including transitive) so to save disk space and build time, we are using one OutputPath for all -->
         <OutputPath>$(RepositoryRootPath)/Binaries/$(Configuration)</OutputPath>
         
+        <!-- Before the multi-target effort this was false -->
         <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 
