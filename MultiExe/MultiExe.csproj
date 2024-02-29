@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="$(RepositoryRootPath)/Base.props" />
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    </PropertyGroup>
+
+</Project>

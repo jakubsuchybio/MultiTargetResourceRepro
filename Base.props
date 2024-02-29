@@ -1,0 +1,18 @@
+<Project>
+    <PropertyGroup>
+        <PlatformTarget>x86</PlatformTarget>
+
+        <OutputPath>$(RepositoryRootPath)/Binaries/$(Configuration)</OutputPath>
+        
+        <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+        <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+        <MSBuildCopyContentTransitively>true</MSBuildCopyContentTransitively>
+    </PropertyGroup>
+</Project>

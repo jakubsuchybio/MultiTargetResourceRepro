@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="$(RepositoryRootPath)/Base.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <ToCopyResources Include="text.json" />
+        <UpToDateCheckBuilt Include="@(ToCopyResources->'$(TargetDir)%(RecursiveDir)%(Filename)%(Extension)')" Original="@(ToCopyResources)" />
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Copy SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)" />
+    </Target>
+</Project>
