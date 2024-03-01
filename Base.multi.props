@@ -1,6 +1,6 @@
 <Project>
     <Import Project="$(RepositoryRootPath)/Base.props" />
     <PropertyGroup>
-        <TargetFrameworks>net48;net8.0-windows</TargetFrameworks>
+        <TargetFrameworks>$(TargetFrameworkNet48);$(TargetFrameworkNet)</TargetFrameworks>
     </PropertyGroup>
 </Project>

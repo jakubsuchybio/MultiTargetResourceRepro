@@ -3,7 +3,9 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\NetStLib\NetStLib.csproj" />
+    </ItemGroup>
 </Project>

@@ -17,5 +17,7 @@
         Ideal solution would be to somehow get projects referencing this project and read their TargetFramework or OutputPath and adjust this copy to acomodate that without modyfing other projects
         -->
         <Copy SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)" />
+        <Copy SkipUnchangedFiles="true" Condition="$(OutputPathFromCli) == ''" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)../$(TargetFrameworkNet48)" />
+        <Copy SkipUnchangedFiles="true" Condition="$(OutputPathFromCli) == ''" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)../$(TargetFrameworkNet)" />
     </Target>
 </Project>

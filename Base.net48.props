@@ -1,6 +1,6 @@
 <Project>
     <Import Project="$(RepositoryRootPath)/Base.props" />
     <PropertyGroup>
-        <TargetFramework>net48</TargetFramework>
+        <TargetFramework>$(TargetFrameworkNet48)</TargetFramework>
     </PropertyGroup>
 </Project>

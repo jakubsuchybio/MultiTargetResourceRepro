@@ -16,5 +16,8 @@
 
         <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
         <MSBuildCopyContentTransitively>true</MSBuildCopyContentTransitively>
+        
+        <TargetFrameworkNet48>net48</TargetFrameworkNet48>
+        <TargetFrameworkNet>net8.0-windows</TargetFrameworkNet>
     </PropertyGroup>
 </Project>
