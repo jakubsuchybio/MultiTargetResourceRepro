@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="$(RepositoryRootPath)/Base.props" />
+    <Import Project="$(RepositoryRootPath)/Base.net8.props" />
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>

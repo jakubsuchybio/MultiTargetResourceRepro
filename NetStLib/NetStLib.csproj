@@ -1,9 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="$(RepositoryRootPath)/Base.props" />
-
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-    </PropertyGroup>
+    <Import Project="$(RepositoryRootPath)/Base.standard20.props" />
     <ItemGroup>
         <!-- 
         We use copy here and not CopyToOutputDirectory, because with those 230+ projects, when rebuild is being done, it was failing

@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		Base.props = Base.props
 		Directory.Build.props = Directory.Build.props
 		.gitignore = .gitignore
+		Base.multi.props = Base.multi.props
+		Base.net8.props = Base.net8.props
+		Base.net48.props = Base.net48.props
+		Base.standard20.props = Base.standard20.props
 	EndProjectSection
 EndProject
 Global

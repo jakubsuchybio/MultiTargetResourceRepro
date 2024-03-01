@@ -1,0 +1,6 @@
+<Project>
+    <Import Project="$(RepositoryRootPath)/Base.props" />
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+</Project>

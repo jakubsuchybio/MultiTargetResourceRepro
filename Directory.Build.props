@@ -1,5 +1,6 @@
 <Project>
   <PropertyGroup>
     <RepositoryRootPath>$(MSBuildThisFileDirectory)</RepositoryRootPath>
+    <TargetFrameworksShared>net48;net8.0-windows</TargetFrameworksShared>
   </PropertyGroup>
 </Project>
