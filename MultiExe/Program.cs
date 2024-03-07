@@ -9,4 +9,12 @@ namespace MultiExe
             Console.WriteLine("Hello, multi World!");
         }
     }
+
+    public static class Test
+    {
+        public static void TestMethod()
+        {
+            Console.WriteLine("Hello, multi World!");
+        }
+    } 
 }

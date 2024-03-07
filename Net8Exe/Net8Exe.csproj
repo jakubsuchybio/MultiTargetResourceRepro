@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\MultiExe\MultiExe.csproj" />
         <ProjectReference Include="..\NetStLib\NetStLib.csproj" />
     </ItemGroup>
 </Project>
