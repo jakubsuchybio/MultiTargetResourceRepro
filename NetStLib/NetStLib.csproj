@@ -8,16 +8,10 @@
         That is why we are doing this, because this is only ran after Build, but when Clean is called, resources are not cleaned
          -->
         <ToCopyResources Include="text.json" />
-        <UpToDateCheckBuilt Include="@(ToCopyResources->'$(TargetDir)%(RecursiveDir)%(Filename)%(Extension)')" Original="@(ToCopyResources)" />
     </ItemGroup>
 
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <!-- 
-        This copy only to netstandard2.0 folder, but not in the other (net48, net8) folders
-        Ideal solution would be to somehow get projects referencing this project and read their TargetFramework or OutputPath and adjust this copy to acomodate that without modyfing other projects
-        -->
-        <Copy SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)" />
-        <Copy SkipUnchangedFiles="true" Condition="$(OutputPathFromCli) == ''" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)../$(TargetFrameworkNet48)" />
-        <Copy SkipUnchangedFiles="true" Condition="$(OutputPathFromCli) == ''" OverwriteReadOnlyFiles="true" SourceFiles="@(ToCopyResources)" DestinationFolder="$(TargetDir)../$(TargetFrameworkNet)" />
-    </Target>
+    <ItemGroup>
+        <None Include="@(ToCopyResources)" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
 </Project>
